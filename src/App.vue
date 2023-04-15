@@ -1,4 +1,5 @@
 <template>
+  <h1>You are on page {{ $route.query.page }}</h1>
   <div id="app">
     <div id="nav">
       <router-link :to="{ name: 'EventList' }">Events</router-link> |

@@ -1,4 +1,5 @@
 <template>
+  <!-- <h1>You are on page {{ page }}</h1> -->
   <router-link
     class="event-link"
     :to="{ name: 'EventDetails', params: { id: event.id } }"

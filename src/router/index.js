@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import EventList from '@/views/EventList.vue'
-import EventDetails from '@/views/EventDetails.vue'
-import AboutView from '@/views/AboutView.vue'
-import Test1View from '@/views/TestView.vue'
+import EventList from '../views/EventList.vue'
+import EventDetails from '../views/EventDetails.vue'
+import About from '../views/AboutView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'EventList',
     component: EventList,
+    props: (route) => ({ page: parseInt(route.query.page) || 1 }),
   },
   {
     path: '/event/:id',
@@ -19,12 +19,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: AboutView,
-  },
-  {
-    path: '/Test',
-    name: 'Test',
-    component: Test1View,
+    component: About,
   },
 ]
 
